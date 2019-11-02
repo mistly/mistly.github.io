@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>swift2</title>
+    <url>/2019/11/03/swift2/</url>
+    <content><![CDATA[<h2 id="swift"><a href="#swift" class="headerlink" title="swift"></a><strong>swift</strong></h2><p><strong>学习笔记及收获</strong></p>
+<p><strong>class</strong>：<em>允许一个嘞继承另一个类的特性</em></p>
+<p>​             <em>类型转换，允许在运行时检查和指定一个类的实际类型</em></p>
+<p>​             <em>析构方法允许类的实例释放所有资源</em></p>
+<p>​             <em>引用计数允许多个引用指向一个实例</em></p>
+<p><strong>struct</strong>：<em>通用 灵活的结构体，是程序的基础组成部分，并提供了默认初始化方法。与class不同                   ，当struct在代码中被传递时，是被拷贝的，并不是使用引用计数。除此之外，struct没有下面       的这些功能：</em></p>
+<p>​             <em>使用继承</em></p>
+<p>​             <em>运行时的类型转换</em></p>
+<p>​             <em>使用析构方法</em> </p>
+<p><strong>static</strong>：<em>用于定义类方法，在类型本身进行调用。此外还可以定义静态成员。</em></p>
+<p><strong>do</strong>:<em>用于处理错误代码段的开始。</em></p>
+<p><strong>self</strong>：<em>任何类型的实例都拥有的隐式属性，等同于实时本身。此外还可以用于区分函数参数和成员属性名称相同的情况。</em></p>
+<p><strong>throws</strong>：<em>指明在一个函数 方法 初始化方法中可能会抛出error。</em></p>
+<p><strong>override</strong>：<em>指明子类会提供自定义实现，覆盖父类的实例方法 类型方法 实例属性 类型属性 下标。如果没有实现，则会直接继承父类。</em></p>
+<p><strong>func</strong>:<em>包含用于执行特定任务的代码块。</em></p>
+<p><strong>init</strong>：<em>类 结构体 枚举的实例的初始化准备过程。</em></p>
+<p><strong>import</strong>：<em>引用一个值传入独立单元构建的框架或者应用。</em></p>
+<p><strong>enum</strong>：<em>定义包含了一组有关的值的类型，并可以以一种类型安全的方法使用这些值。在swift中，枚举是一等类型，拥有在其他语言中有class才会支持的特性。</em></p>
+<p><strong>收获</strong>：慢慢摸索吧，快期中了，为复习忙的团团转，一堆作业制裁，没有较认真地完成考核任务，心怀愧疚，成功路上总是布满荆棘，只有面带微笑，身披铠甲，不惧一切地勇往直前，终究会迎来胜利地曙光。学习swift，痛并快乐着。今天也要热爱swift呀，总有一天会熟透于心，熟练敲出正确地代码。</p>
+<p><strong>代码</strong>：</p>
+<p><del>（自我感觉不好）</del></p>
+<p>` //   第0列  第1列<br>//第0行  4    -2   索引：当前列 + 0<br>//第1行  9    0   索引：当前列 + 之前所有行列总数（当前行 * 总列数）<br>//<br>//通过变换成Int数组[4， -2， 9， 0],以索引来访问，确保数组索引不得越界。<br>class Array{<br>  var Array : String<br>  init(Array: String) {<br>    self.Array = Array<br>  }<br>}<br>struct Matrix {<br>  var rows , cols :Int<br>  var grid : [Int]</p>
+<p>  init(rows: Int,cols: Int) {<br>    self.cols = cols<br>    self.rows = rows</p>
+<pre><code>grid = Array(repeating: 0, Array: rows * cols)</code></pre><p>  }<br>  func indexIsValid(row: Int,col: Int) -&gt; Bool {<br>    return row &gt;= 0 &amp;&amp; row &lt; rows &amp;&amp; col &gt;= 0 &amp;&amp; col &lt; cols<br>  }<br>  subscript(row: Int,col: Int) -&gt; Int{<br>    get{<br>      assert(indexIsValid(row: row, col: col),”数组索引越界”)<br>      return grid[col + (row * col)]<br>    }<br>    set {<br>      assert(indexIsValid(row: row, col: col),”数组索引越界”)<br>      grid[col + (row * col)] = newValue<br>    }<br>  }<br>}<br> `</p>
+]]></content>
+  </entry>
+  <entry>
     <title>swift</title>
     <url>/2019/10/26/swift/</url>
     <content><![CDATA[<h2 id="学习笔记及收获"><a href="#学习笔记及收获" class="headerlink" title="学习笔记及收获"></a>学习笔记及收获</h2><p><strong><em>三天学会 swift3.0  第一天</em></strong></p>
