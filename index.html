@@ -238,8 +238,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
     
-              <time title="创建时间：2019-11-09 08:36:37" itemprop="dateCreated datePublished" datetime="2019-11-09T08:36:37+08:00">2019-11-09</time>
+              <time title="创建时间：2019-11-09 08:36:37 / 修改时间：09:17:48" itemprop="dateCreated datePublished" datetime="2019-11-09T08:36:37+08:00">2019-11-09</time>
             </span>
     
           
@@ -262,10 +263,13 @@
 <p> <strong>required</strong>：<em>确保编译器会检查该类的所有子类，全部实现了指定的构造器方法。</em> </p>
 <p> <strong>set</strong>：<em>通过获取的新值来设置成员的值。同样可以用于计算型属性来间接设置其它属性。如果计算型属性的 setter 没有定义新值的名称，可以使用默认的 newValue。</em> </p>
 <h3 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h3><p>协议真的很好用，可是自己的榆木脑袋却不能将它们用到一起，实属惭愧。最近在忙着复习期中，繁重的作业让我没能认真学习swift，总是一种看着都懂，一上手就脑袋空白，思维方法有待提高。因为没有全身心投入学习swift，产生了一种swift很难，自己不敢轻易下手的心理，望在接下来的学习中改变这种心理，增强对swift兴趣与喜爱。</p>
-<p>` protocol protocolA {<br>  var marks: Int{set get}<br>  var result: Bool{get}<br>  func attendence() -&gt; String<br>  func markSecured() -&gt; String<br>}<br>protocol protocolB: protocolA {<br>  var subject: String{get set}<br>  var stuName: String{get set}<br>}<br>class StudentMarks: protocolB {<br>  var subject: String = “match”<br>  var stuName: String = “jack”<br>  var marks: Int = 80<br>  let result: Bool = true<br>  func attendence() -&gt; String {<br>     return “The(stuName) has scored 99% attendance”<br>  }<br>  func markSecured() -&gt; String {<br>    return “(stuName) has scored (marks)”<br>  }<br>}<br>let stu = StudentMarks()<br>stu.stuName = “rose”<br>print(stu.stuName, stu.subject)<br>print(stu.attendence())</p>
+<p>` <u>1.定义静态方法：统计出勤率</u></p>
+<p>protocol protocolA {<br>  var marks: Int{set get}<br>  var result: Bool{get}<br>  func attendence() -&gt; String<br>  func markSecured() -&gt; String<br>}<br>protocol protocolB: protocolA {<br>  var subject: String{get set}<br>  var stuName: String{get set}<br>}<br>class StudentMarks: protocolB {<br>  var subject: String = “match”<br>  var stuName: String = “jack”<br>  var marks: Int = 80<br>  let result: Bool = true<br>  func attendence() -&gt; String {<br>     return “The(stuName) has scored 99% attendance”<br>  }<br>  func markSecured() -&gt; String {<br>    return “(stuName) has scored (marks)”<br>  }<br>}<br>let stu = StudentMarks()<br>stu.stuName = “rose”<br>print(stu.stuName, stu.subject)<br>print(stu.attendence())</p>
+<p><u>2.声名个动物的父类，然后让猫和狗class都继承与动物class。在定义一个宠物的属性，里面有玩耍和喂食两个方法，让猫和狗都继承与宠物协议</u></p>
 <p>protocol Pet {<br>  func playWith()<br>  func fed(food : String)<br>}<br>class Animal{<br>  var name : String = “”<br>  var birthPlace : String = “”<br>  init(name: String,birthPlace:String) {<br>    self.name = name<br>    self.birthPlace = birthPlace<br>  }<br>}</p>
 <p>class Dog: Animal, Pet{<br>  func playWith() {<br>    print(“狗狗在玩”)<br>  }<br>  func fed(food: String){<br>    if food == “骨头” {<br>     print(“狗狗高兴”)<br>    }<br>    else{<br>     print(“狗狗伤心”)<br>    }<br>  }<br>}<br>class Cat: Animal, Pet {<br>  func playWith() {<br>    print(“猫猫在玩”)<br>  }<br>  func fed(food: String) {<br>    if food == “鱼” {<br>      print(“猫猫高兴”)<br>    }<br>    else{<br>      print(“猫猫伤心”)<br>    }<br>  }<br>}</p>
 <p>let dog = Dog(name: “狗狗小黑”, birthPlace: “北京”)<br>dog.playWith()<br>dog.fed(food: “骨头”)<br>let cat = Cat(name: “猫猫小白”, birthPlace: “上海”)<br>cat.playWith()<br>cat.fed(food: “鱼”)</p>
+<p><u>3.协议普通方法协议：输出一个随机数</u></p>
 <p>// 定义协议，指定方法要求<br>protocol RandomNumberGenerator {<br>  func random() -&gt; Double  //实现该协议，需要实现该方法<br>}</p>
 <p>class LinearCongruentialGenerator :RandomNumberGenerator {<br>  var lastRandom = 42.0<br>  let m = 139968.0<br>  let a = 3877.0<br>  let c = 29573.0</p>
 <p>  // 实现协议的方法<br>  func random() -&gt; Double {<br>    lastRandom = ((lastRandom * a + c) .truncatingRemainder(dividingBy: m))//truncatingRemainder:取余<br>    return lastRandom / m<br>  }<br>}</p>
@@ -282,7 +286,7 @@
         <div class="post-eof"></div>
       </footer>
     <span title="post.wordcount">
-         722 字
+         806 字
         </span>
   </article>
   
