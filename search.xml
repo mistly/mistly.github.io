@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第五周  2019.11.92019.11.16</title>
+    <url>/2019/11/15/%E7%AC%AC%E4%BA%94%E5%91%A8%20%202019.11.92019.11.16/</url>
+    <content><![CDATA[<h2 id="第五周-2019-11-9-2019-11-16"><a href="#第五周-2019-11-9-2019-11-16" class="headerlink" title="第五周  2019.11.9~2019.11.16"></a>第五周  2019.11.9~2019.11.16</h2><p><strong>Xcode文件管理区</strong></p>
+<p><strong>左上角第一个图标：</strong></p>
+<p><u>AppDeleate.swift:</u><em>应用代理文件，是系统运行本应用的委托，里面定义了如程序的进入与退出，设备方向的旋转等众多全局方法。</em></p>
+<p><u>Viewcontroller.swift:</u><em>视图控制器可以创建喝管理视图，也可以监测视图大小以适应屏幕，以及在视图和模板之间进行数据的传递。</em></p>
+<p><u>Main.storyboard:</u><em>故事板可以使所有视图控制器以及它们之间的关系一目了然。故事板也是适配多个分辨率设备的利器。</em></p>
+<p><u>LaunchScreen.storyboard:</u><em>故事场景板，可以设计和适配程序的启动页。</em></p>
+<p><u>Assets.xcassets:</u><em>资源文件夹，方便进行图片管理，并且在读取图片时不需要图片名的后缀。它将图片进行加密压缩，一提高软件的安全性。</em></p>
+<p><u>Products:</u><em>产品目录，存放项目编译后生成的文件包。使用【产品&gt;编译】命令，可以在此处生成适合发布到苹果市场的应用压缩包。</em></p>
+<p><strong>左上角第二个图标：*</strong>控制面板，进去源码版本控制面板。在此页面板可以对源码进行版本的管理。*</p>
+<p><strong>左上角第三个图标：*</strong>层级面板，显示了项目中的类列表，点击类名左侧的右向箭头，可以查看类下的方法。*</p>
+<p><strong>*左上角第四个图标：</strong>搜索面板*</p>
+<p><strong>左上角的五个图标：*</strong>状况面板，显示了所有文档中的代码问题。黄色图标表示各种不影响程序运行的小问题，红色标志表示致命错误，需要修复才能运行。*</p>
+<p><strong>左上角第六个图标：*</strong>测视面板，显示了项目的测试用例。*</p>
+<p><strong>左上角第七个图标：*</strong>调试面板，在测视应用中极为有用。*</p>
+<p><u>CPU：</u><em>处理器，观察程序运行时，设备的处理器的实时状况。</em></p>
+<p><u>Memory：</u><em>内存，观察程序运行中内存的实时状态。</em></p>
+<p><u>Disk：</u><em>硬盘，观察程序运行中，对硬盘的读取与存入的实时状态。</em></p>
+<p><u>Network:</u><em>网络，观察程序运行中的网络请求状态。</em></p>
+<p><strong>左上角第八个图标：*</strong>断点面板，在代码区进行调试时，这里将列出项目中的所有断点。*</p>
+<p><strong>左上角第九个图标：*</strong>日志面板，记录当前项目所有的历史动作。*</p>
+<p> <strong>一、Assets.xcassets能干什么</strong><br><em>Assets.xcassets是用来存放图像资源文件；</em></p>
+<p><strong>二*、使用Assets的好处</strong><br><em>1、自动管理图片,如@1x,@2x图片,使用的时候使用Asset 名字即可；</em></p>
+<p><em>2、管理应用的Icon和Default图片,这个挺方便的,可以完全抛开以前规范命名如Icon.png,<a href="mailto:Icon@2x.png" target="_blank" rel="noopener">Icon@2x.png</a>,Xcode会自动识别尺寸然后匹配进去；</em></p>
+<p><em>3、个人觉得方便模块图片管理,可以针对模块建立Component1.xcassets,在这个Category中去建立新的Image set；</em></p>
+<p><em>4、可以可视化管理图片拉伸,从而抛弃到处使用resizeImage…来获取拉伸图片；</em></p>
+<p><strong>三、使用Assets注意事项</strong></p>
+<p><em>1、在Assets中的图片不能通过imageWithContentsOfFile:加载；</em></p>
+<p><em>2、imageName:加载的图片要么是Assets中的图片，要么是资源包中的图片，如果要用imageName:加载其他的图片，必须在文件名后面添加扩展名。</em></p>
+<p> <strong>四、如何使用Assets</strong></p>
+<p><em>1、创建Asset Catalog：</em><br><em>方法:使用 File - new - File - Resource - Asset Catalog,会需要输入名字和选择Target；</em></p>
+<p><em>建立完毕后单击,文档会将整个操作区域从左到右分为三部分,SetList, Set Viewer, Set attributes inspector；</em></p>
+<p><em>在SetList区域左下角会有新增(+)和删除(-)按钮,实际在区域内右击也会有对应选项；</em></p>
+<p><em>New Image Set:图片夹,这个常用；</em></p>
+<p><em>New App Icon:用于图标管理；</em></p>
+<p><em>New Lauch Image: 启动图；</em></p>
+<p><em>New Folder:新文件夹,支持在文件夹嵌套</em></p>
+<p> <strong>自动布局（layout）</strong></p>
+<p><em>基于约束的布局系统，以便于适配不同尺寸机型喝设备旋转。（没有自动布局，Storyboard的布局时以像素计算的（绝对布局））。</em></p>
+<p><em>中心思想：你如何描述一个元素</em></p>
+<p><em>约束=位置规则</em></p>
+<p><em>布局条【右下角】（从左到右第二个开始）：组合、对齐、新增、修正</em></p>
+<p> <strong>UILabel</strong>  (继承于UIView)</p>
+<p><u>1.创建方法</u>: <em>UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(origini.x, origin.y, size.width, size.height)]</em>   </p>
+<p><u>2.常用属性:</u></p>
+<p><u>标签文本:</u> <em>label.text   NSString类型 可设置或获取label的文本*</em></p>
+<p> <u>文本颜色:*</u> <em>label.textColor  UIColor类型 可设置或获取label文本的颜色*</em></p>
+<p>  <u>文本字体:</u> <em>label.font  UIFont类型   可设置或获取字体大小,字体等 。</em></p>
+<p>  <u>文本对齐方式:</u> <em>label.textAlignment NSTextAlignment类型(枚举) 可设置或获取文本的对齐式:NSTextAlignmentLeft(左对齐), NSTextAlignmentCenter(居中)等方式</em></p>
+<p>  <u>标签(框架)大小:</u> <em>label.frame  CGRect类型  可设置或获取label的大小(相对大小)  label.frame = CGRect(0,0,5,15)  注意:设置label的frame属性时不能对frame的origin或size直接赋值,否则会报错。</em><br>    <u>文本行数:</u> <em>label.numberOfLines  NSInteger类型 可设置或获取文本的行数  注意:当将此属性的值设置为0时,label文本显示的行数则不受限制,即能显示多少行就显示多少行</em></p>
+<p>  <u>文本换行模式:</u> <em>label.lineBreakMode  NSLineBreakMode类型(枚举)  可设置或获取文本的换行模式:NSLineBreakByWordWrapping, NSLineBreakByCliping等等模式</em></p>
+<p>  <u>文本阴影颜色:</u> <em>label.shadowColor  UIColor类型  可设置或获取文本的阴影颜色</em> </p>
+<p>  <u>阴影方向:</u> <em>label.shadowOffset  CGSize类型  可设置或获取文本阴影的方向和位置, 高height值的正,负分别代表上,下方向的偏移量,同理宽width值代表左右方向</em></p>
+<p>   <strong>UITextField</strong> (继承于UIControl (UIControl继承于UIView, UIView又继承于UIResponse))</p>
+<p><u>1.创建方法:</u> <em>UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(origini.x, origin.y, size.width, size.height)]</em></p>
+<p><u>2.常用属性:</u></p>
+<p><u>边框类型:</u> <em>textField.borderStyle  UITextBorderStyle类型(枚举) 可设置或获取文本框的边框类型</em></p>
+<p>  <u>文本框内容:</u> <em>textField.text  NSString类型 可设置或获取文本框的内容 。</em></p>
+<p>  <u>文本框的默认内容:</u> <em>textField.placeHolder  NSString类型 可设置或获取文本框编辑前的默认显示内容</em></p>
+<p>  <u>文本对齐方式:</u> t<em>extField.textAlignment NSTextAlignment类型(枚举)</em></p>
+<p>  <u>清除内容按钮:  <em>开始编辑时是否清除原有内容: textField.clearsOnBeginEditing  BOOL类型 设置在点击文本框进行编辑时是否清除掉原有的内容</em></p>
+<p>  <u>键盘样式:</u> <em>textField.keyboardType UIKeyboardType类型(枚举) 设置弹出的键盘的类型。</em></p>
+<p>  <u>回车键样式:</u> <em>textField.returnKeyType UIReturnKeyType类型(枚举) 可设置弹出的键盘的return键的类型。</em></p>
+<p>  <u>是否密文输入:</u> <em>textField.secureTextEntry BOOL类型 可设置编辑文本框时是否密文输入,常见于密码框的输入</em></p>
+<p>  <u>左,右视图模式:</u> <strong>textField.leftViewMode UITextFieldViewMode类型(枚举)  设置文本框的左右视图*<br>*<br>  **UIButton</strong>  继承于UIControl</p>
+<p><u>1.创建方法:</u>  <em>UIButton *button = [[UIButton buttonWithType:UIButtonType]  UIButtonType为枚举类型,有:UIButtonTypeCustom,UIButtonTypeSystem等类型</em></p>
+<p><u>2.常用属性:</u></p>
+<p>  <u>边框大小:</u> <em>button.frame  CGRect类型  可设置或获取button的大小(相对大小),赋值方法与label类似，</em></p>
+<p>  <u>是否被选中:</u><em>button.selected  BOOL类型  可设置或获取button是否被选中</em></p>
+<p>  <u>button标题颜色:</u> <em>button.tintColor  UIColor类型  可设置或获取button标题的颜色</em></p>
+<p><u>3.功能方法:</u></p>
+<p>  <u>设置标题:</u> <em>[button setTitle:title forState:UIControlState]  给button的标题设为title, UIControlState为button的状态,有:UIControlStateNormal, UIControlStateSelected等</em></p>
+<p>  <u>设置背景图片:</u> <em>[button setBackgroundImage:image forState:UIControlState]  将图片image设置为button的背景图片</em></p>
+<p>  <u>添加响应事件:</u><em>[button addTarget:target] action:action forControlEvents:UIControlEvents]  为button添加事件,target为响应对象,action为响应方法,UIControlEvents为触发事件</em></p>
+<p><strong>UIImageView</strong>  直接继承于UIView </p>
+<p><em>UIImageView用于显示图片类资源,可以形象地将其理解为一个相框,用来显示”相片”</em></p>
+<p><u>1.创建方法:</u>  <em>UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame]</em></p>
+<p><u>2.常用属性:</u></p>
+<p>  <u>图片:</u> <em>*imageView.image UIImage类型  可设置或获取imageView的图片imag动画</em></p>
+<p><strong>学习心得：</strong>这一周的考核任务说轻松是比前几周轻松，但是内容较多，需要多加消化，多加练习。自己也有拿小本本记录一些。xcode中还有很多自己为涉及的领域，之后应该就会接触到吧。storyboard是一个挺好玩的东西，可以创建自己喜欢的界面，同时它还有很多地方等待着我去探索。上面有些是网上查找的，比如UI的扩展和Assets的相关运用，有些是通过相关视频精简出来的。通过本周的学习，对xcode又有了新的了解，收获满满，开心😊~语法也在继续深入学习中，争取更上一层楼！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>swift3</title>
     <url>/2019/11/09/swift3/</url>
     <content><![CDATA[<h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><p> <strong>extension</strong>：<em>允许给已有的类、结构体、枚举、协议类型，添加新功能。</em> </p>
