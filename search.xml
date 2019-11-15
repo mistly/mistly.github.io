@@ -32,7 +32,7 @@
 <p><em>1、在Assets中的图片不能通过imageWithContentsOfFile:加载；</em></p>
 <p><em>2、imageName:加载的图片要么是Assets中的图片，要么是资源包中的图片，如果要用imageName:加载其他的图片，必须在文件名后面添加扩展名。</em></p>
 <p> <strong>四、如何使用Assets</strong></p>
-<p><em>1、创建Asset Catalog：</em><br><em>方法:使用 File - new - File - Resource - Asset Catalog,会需要输入名字和选择Target；</em></p>
+<p><em>创建Asset Catalog：</em><br><em>方法:使用 File - new - File - Resource - Asset Catalog,会需要输入名字和选择Target；</em></p>
 <p><em>建立完毕后单击,文档会将整个操作区域从左到右分为三部分,SetList, Set Viewer, Set attributes inspector；</em></p>
 <p><em>在SetList区域左下角会有新增(+)和删除(-)按钮,实际在区域内右击也会有对应选项；</em></p>
 <p><em>New Image Set:图片夹,这个常用；</em></p>
@@ -47,41 +47,42 @@
 <p> <strong>UILabel</strong>  (继承于UIView)</p>
 <p><u>1.创建方法</u>: <em>UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(origini.x, origin.y, size.width, size.height)]</em>   </p>
 <p><u>2.常用属性:</u></p>
-<p><u>标签文本:</u> <em>label.text   NSString类型 可设置或获取label的文本*</em></p>
-<p> <u>文本颜色:*</u> <em>label.textColor  UIColor类型 可设置或获取label文本的颜色*</em></p>
-<p>  <u>文本字体:</u> <em>label.font  UIFont类型   可设置或获取字体大小,字体等 。</em></p>
-<p>  <u>文本对齐方式:</u> <em>label.textAlignment NSTextAlignment类型(枚举) 可设置或获取文本的对齐式:NSTextAlignmentLeft(左对齐), NSTextAlignmentCenter(居中)等方式</em></p>
-<p>  <u>标签(框架)大小:</u> <em>label.frame  CGRect类型  可设置或获取label的大小(相对大小)  label.frame = CGRect(0,0,5,15)  注意:设置label的frame属性时不能对frame的origin或size直接赋值,否则会报错。</em><br>    <u>文本行数:</u> <em>label.numberOfLines  NSInteger类型 可设置或获取文本的行数  注意:当将此属性的值设置为0时,label文本显示的行数则不受限制,即能显示多少行就显示多少行</em></p>
-<p>  <u>文本换行模式:</u> <em>label.lineBreakMode  NSLineBreakMode类型(枚举)  可设置或获取文本的换行模式:NSLineBreakByWordWrapping, NSLineBreakByCliping等等模式</em></p>
-<p>  <u>文本阴影颜色:</u> <em>label.shadowColor  UIColor类型  可设置或获取文本的阴影颜色</em> </p>
-<p>  <u>阴影方向:</u> <em>label.shadowOffset  CGSize类型  可设置或获取文本阴影的方向和位置, 高height值的正,负分别代表上,下方向的偏移量,同理宽width值代表左右方向</em></p>
-<p>   <strong>UITextField</strong> (继承于UIControl (UIControl继承于UIView, UIView又继承于UIResponse))</p>
-<p><u>1.创建方法:</u> <em>UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(origini.x, origin.y, size.width, size.height)]</em></p>
+<p><u>标签文本</u>： <em>label.text   NSString类型 可设置或获取label的文本</em></p>
+<p> <u>文本颜色</u>：<em>label.textColor  UIColor类型 可设置或获取label文本的颜色</em></p>
+<p>  <u>文本字体</u> ：<em>label.font  UIFont类型   可设置或获取字体大小,字体等 。</em></p>
+<p>  <u>文本对齐方式</u>： <em>label.textAlignment NSTextAlignment类型(枚举) 可设置或获取文本的对齐式:NSTextAlignmentLeft(左对齐), NSTextAlignmentCenter(居中)等方式</em></p>
+<p>  <u>标签(框架)大小</u>; <em>label.frame  CGRect类型  可设置或获取label的大小(相对大小)  label.frame = CGRect(0,0,5,15)  注意:设置label的frame属性时不能对frame的origin或size直接赋值,否则会报错。</em><br>    <u>文本行数</u>： <em>label.numberOfLines  NSInteger类型 可设置或获取文本的行数  注意:当将此属性的值设置为0时,label文本显示的行数则不受限制,即能显示多少行就显示多少行</em></p>
+<p>  <u>文本换行模式</u>： <em>label.lineBreakMode  NSLineBreakMode类型(枚举)  可设置或获取文本的换行模式:NSLineBreakByWordWrapping, NSLineBreakByCliping等等模式</em></p>
+<p>  <u>文本阴影颜色</u>： <em>label.shadowColor  UIColor类型  可设置或获取文本的阴影颜色</em> </p>
+<p>  <u>阴影方向</u> ：<em>label.shadowOffset  CGSize类型  可设置或获取文本阴影的方向和位置, 高height值的正,负分别代表上,下方向的偏移量,同理宽width值代表左右方向</em></p>
+<p>   <strong>UITextField</strong>  (继承于UIControl (UIControl继承于UIView, UIView又继承于UIResponse))</p>
+<p><u>1.创建方法</u>： <em>UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(origini.x, origin.y, size.width, size.height)]</em></p>
 <p><u>2.常用属性:</u></p>
-<p><u>边框类型:</u> <em>textField.borderStyle  UITextBorderStyle类型(枚举) 可设置或获取文本框的边框类型</em></p>
-<p>  <u>文本框内容:</u> <em>textField.text  NSString类型 可设置或获取文本框的内容 。</em></p>
-<p>  <u>文本框的默认内容:</u> <em>textField.placeHolder  NSString类型 可设置或获取文本框编辑前的默认显示内容</em></p>
-<p>  <u>文本对齐方式:</u> t<em>extField.textAlignment NSTextAlignment类型(枚举)</em></p>
-<p>  <u>清除内容按钮:  <em>开始编辑时是否清除原有内容: textField.clearsOnBeginEditing  BOOL类型 设置在点击文本框进行编辑时是否清除掉原有的内容</em></p>
-<p>  <u>键盘样式:</u> <em>textField.keyboardType UIKeyboardType类型(枚举) 设置弹出的键盘的类型。</em></p>
-<p>  <u>回车键样式:</u> <em>textField.returnKeyType UIReturnKeyType类型(枚举) 可设置弹出的键盘的return键的类型。</em></p>
-<p>  <u>是否密文输入:</u> <em>textField.secureTextEntry BOOL类型 可设置编辑文本框时是否密文输入,常见于密码框的输入</em></p>
-<p>  <u>左,右视图模式:</u> <strong>textField.leftViewMode UITextFieldViewMode类型(枚举)  设置文本框的左右视图*<br>*<br>  **UIButton</strong>  继承于UIControl</p>
-<p><u>1.创建方法:</u>  <em>UIButton *button = [[UIButton buttonWithType:UIButtonType]  UIButtonType为枚举类型,有:UIButtonTypeCustom,UIButtonTypeSystem等类型</em></p>
+<p><u>边框类型</u>: <em>textField.borderStyle  UITextBorderStyle类型(枚举) 可设置或获取文本框的边框类型</em></p>
+<p>  <u>文本框内容</u>: <em>textField.text  NSString类型 可设置或获取文本框的内容 。</em></p>
+<p>  <u>文本框的默认内容</u>: <em>textField.placeHolder  NSString类型 可设置或获取文本框编辑前的默认显示内容</em></p>
+<p>  <u>文本对齐方式</u>: t<em>extField.textAlignment NSTextAlignment类型(枚举)</em></p>
+<p>  <u>清除内容按钮</u>:  <em>开始编辑时是否清除原有内容: textField.clearsOnBeginEditing  BOOL类型 设置在点击文本框进行编辑时是否清除掉原有的内容</em></p>
+<p>  <u>键盘样式</u>: <em>textField.keyboardType UIKeyboardType类型(枚举) 设置弹出的键盘的类型。</em></p>
+<p>  <u>回车键样式</u>: <em>textField.returnKeyType UIReturnKeyType类型(枚举) 可设置弹出的键盘的return键的类型。</em></p>
+<p>  <u>是否密文输入</u>: <em>textField.secureTextEntry BOOL类型 可设置编辑文本框时是否密文输入,常见于密码框的输入</em></p>
+<p>  <u>左,右视图模式</u>: <em>textField.leftViewMode UITextFieldViewMode类型(枚举)  设置文本框的左右视图</em></p>
+<p>  <strong>UIButton</strong>   继承于UIControl</p>
+<p><u>1.创建方法</u>:  <em>UIButton *button = [[UIButton buttonWithType:UIButtonType]  UIButtonType为枚举类型,有:UIButtonTypeCustom,UIButtonTypeSystem等类型</em></p>
 <p><u>2.常用属性:</u></p>
-<p>  <u>边框大小:</u> <em>button.frame  CGRect类型  可设置或获取button的大小(相对大小),赋值方法与label类似，</em></p>
-<p>  <u>是否被选中:</u><em>button.selected  BOOL类型  可设置或获取button是否被选中</em></p>
-<p>  <u>button标题颜色:</u> <em>button.tintColor  UIColor类型  可设置或获取button标题的颜色</em></p>
+<p>  <u>边框大小</u>: <em>button.frame  CGRect类型  可设置或获取button的大小(相对大小),赋值方法与label类似，</em></p>
+<p>  <u>是否被选中</u>:<em>button.selected  BOOL类型  可设置或获取button是否被选中</em></p>
+<p>  <u>button标题颜色</u>: <em>button.tintColor  UIColor类型  可设置或获取button标题的颜色</em></p>
 <p><u>3.功能方法:</u></p>
-<p>  <u>设置标题:</u> <em>[button setTitle:title forState:UIControlState]  给button的标题设为title, UIControlState为button的状态,有:UIControlStateNormal, UIControlStateSelected等</em></p>
-<p>  <u>设置背景图片:</u> <em>[button setBackgroundImage:image forState:UIControlState]  将图片image设置为button的背景图片</em></p>
-<p>  <u>添加响应事件:</u><em>[button addTarget:target] action:action forControlEvents:UIControlEvents]  为button添加事件,target为响应对象,action为响应方法,UIControlEvents为触发事件</em></p>
+<p>  <u>设置标题</u>: <em>[button setTitle:title forState:UIControlState]  给button的标题设为title, UIControlState为button的状态,有:UIControlStateNormal, UIControlStateSelected等</em></p>
+<p>  <u>设置背景图片</u>: <em>[button setBackgroundImage:image forState:UIControlState]  将图片image设置为button的背景图片</em></p>
+<p>  <u>添加响应事件</u>:<em>[button addTarget:target] action:action forControlEvents:UIControlEvents]  为button添加事件,target为响应对象,action为响应方法,UIControlEvents为触发事件</em></p>
 <p><strong>UIImageView</strong>  直接继承于UIView </p>
 <p><em>UIImageView用于显示图片类资源,可以形象地将其理解为一个相框,用来显示”相片”</em></p>
-<p><u>1.创建方法:</u>  <em>UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame]</em></p>
+<p><u>1.创建方法</u>:  <em>UIImageView imageView = [[UIImageView alloc] initWithFrame:frame]</em></p>
 <p><u>2.常用属性:</u></p>
-<p>  <u>图片:</u> <em>*imageView.image UIImage类型  可设置或获取imageView的图片imag动画</em></p>
-<p><strong>学习心得：</strong>这一周的考核任务说轻松是比前几周轻松，但是内容较多，需要多加消化，多加练习。自己也有拿小本本记录一些。xcode中还有很多自己为涉及的领域，之后应该就会接触到吧。storyboard是一个挺好玩的东西，可以创建自己喜欢的界面，同时它还有很多地方等待着我去探索。上面有些是网上查找的，比如UI的扩展和Assets的相关运用，有些是通过相关视频精简出来的。通过本周的学习，对xcode又有了新的了解，收获满满，开心😊~语法也在继续深入学习中，争取更上一层楼！</p>
+<p>  <u>图片</u> ：<em>imageView.image UIImage类型  可设置或获取imageView的图片imag动画</em></p>
+<p><strong>学习心得</strong>：<em>这一周的考核任务说轻松是比前几周轻松，但是内容较多，需要多加消化，多加练习。自己也有拿小本本记录一些。xcode中还有很多自己为涉及的领域，之后应该就会接触到吧。storyboard是一个挺好玩的东西，可以创建自己喜欢的界面，同时它还有很多地方等待着我去探索。上面有些是网上查找的，比如UI的扩展和Assets的相关运用，有些是通过相关视频精简出来的。通过本周的学习，对xcode又有了新的了解，收获满满，开心😊~语法也在继续深入学习中，争取更上一层楼！</em></p>
 ]]></content>
   </entry>
   <entry>
