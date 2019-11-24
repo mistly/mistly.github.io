@@ -215,6 +215,78 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/24/%E7%AC%AC%E5%85%AD%E5%91%A8%20%202019.11.172019.11.124/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%9B%BE%E7%89%8720191020025938.jpg">
+      <meta itemprop="name" content="Zilian Zhang">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mistly">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/24/%E7%AC%AC%E5%85%AD%E5%91%A8%20%202019.11.172019.11.124/" class="post-title-link" itemprop="url">第六周  2019.11.172019.11.124</a>
+        </h1>
+    
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+    
+              <time title="创建时间：2019-11-24 20:09:38" itemprop="dateCreated datePublished" datetime="2019-11-24T20:09:38+08:00">2019-11-24</time>
+            </span>
+    
+          
+    
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+    
+      
+          <h3 id="第六周-2019-11-17-2019-11-124"><a href="#第六周-2019-11-17-2019-11-124" class="headerlink" title="第六周  2019.11.17~2019.11.124"></a>第六周  2019.11.17~2019.11.124</h3><p><strong>学习笔记：</strong></p>
+<p><u>UIView</u> 是界面上面的一个矩形区域，管理界面上的内容；<br>在运行期间，UIView 处理内容的渲染和内容的交互；<br>UIView 实现了内容展示的最基本方法和属性，特殊的行为由子类实现，例如：UIButton、UILabel 等；<br>在 UIkit 框架中包括了丰富的视图组件从基本的 UIButton 到复杂的 UItable 等；<br>视图的基本功能概括如下几方面：</p>
+<p>1.绘制和动画<br>2.布局和子视图管理<br>3.时间处理</p>
+<p><u>UIControl</u> 是UIView的子类，当然也是UIResponder的子类。UIControl是诸如UIButton，UISwitch，UItextField等控件的父类，它本身包含了一些属性和方法，但是不能直接食用UIControl类，他只是定义了子类都需要使用的方法。</p>
+<p>UIControl对象采用了一种新的事件处理机制，将前一节指节处理的触摸时间直接转换为简单操作，这样可以无需关心用户访问控件的具体方式。触摸事件到达UIControl对象（由响应链者派遣）后，在UIResponder的方法中(如:touchBegin：withEvent)中，UIControl将标准的触摸事件转换为特殊的控件事件，简单的理解就是，UIControl把复杂的触摸事件封装成了简单的易于使用的控件事件。例如通过UIControl对象处理后，按下按钮的事件就被封装成一个控件事件，而不用去判断触摸屏幕的整个操作过程。</p>
+<p> （<a href="https://blog.csdn.net/u012078168/article/details/79050618）" target="_blank" rel="noopener">https://blog.csdn.net/u012078168/article/details/79050618）</a></p>
+<p>从继承关系我们可以知道：<u>UITableView</u>可以滚动，具有view的性质，能响应UI事件等等~</p>
+<p> UITableView可以有很多个section（本文成为组），每个section分别由一个Header（组头）、一个Fooder（组尾）及若干个cell组成。</p>
+<p>重用cell</p>
+<p>为什么要重用cell？<br>由于屏幕显示的cell有限，而当数据量大的时候，如果每个数据创建一个Cell，就会占很大内存。<br>重用cell机制是这样的：创建了屏幕内cell所需的个数+1个屏幕之外的cell，在满足显示效果的前提下尽可能降低消耗内存。<br>这种机制下默认有一个可变数组NSMutableArray* visiableCells用来保存当前显示的cell；一个可变字典NSMutableDictnery* reusableTableCells用来保存可重复利用的cell（之所以用字典是因为可重用的cell有不止一种样式，我们需要根据它的reuseIdentifier，也就是所谓的重用标示符来查找是否有可重用的该样式的cell）。</p>
+<p><strong>学习心得：</strong></p>
+<p>背景、按钮都可以实现，当在table view的实现出现了一些小问题，一开始忘记创建连接，后面补上后还是没有显示，请教闻学长，他帮忙看过之后建议我重新学习一下，代码过于繁琐，其实可以更加简洁，很高兴能得到建议，之前有点不敢问，总是碰到问题，然后钻牛角尖，死循环。感觉把问题提出来后，问题都得到了一定的解决。以后遇上问题，先自我解决，如果没能解决，大胆提出问题，前辈们会给出解决方案，问题也就迎刃而解了。学习过程难免自闭，越学越自闭，越是要学，凡事都是从零开始，慢慢来。</p>
+
+      
+    </div>
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+    <span title="post.wordcount">
+         859 字
+        </span>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/%E7%AC%AC%E4%BA%94%E5%91%A8%20%202019.11.92019.11.16/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -240,7 +312,7 @@
               <span class="post-meta-item-text">发表于</span>
               
     
-              <time title="创建时间：2019-11-15 20:33:43 / 修改时间：20:55:48" itemprop="dateCreated datePublished" datetime="2019-11-15T20:33:43+08:00">2019-11-15</time>
+              <time title="创建时间：2019-11-15 20:33:43 / 修改时间：21:00:53" itemprop="dateCreated datePublished" datetime="2019-11-15T20:33:43+08:00">2019-11-15</time>
             </span>
     
           
@@ -791,7 +863,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
